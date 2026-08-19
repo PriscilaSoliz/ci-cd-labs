@@ -6,7 +6,6 @@ Repositorio de las prácticas y laboratorios del módulo de CI/CD.
 
 * **Laboratorio 1:** Primer Pipeline de Integración Continua (configuración básica de GitHub Actions).
 * **Laboratorio 2:** Branching, Pull Requests y Ejecución de CI (estrategia de ramas y validación automática de integración).
-* **Laboratorio 3:** Integración de Pruebas Automatizadas y Cobertura al Pipeline (Quality Gates y Artefactos).
 
 ## Estructura del Proyecto
 

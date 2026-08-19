@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-and-test:
-    name: Build, Test & Quality Gate
+    name: Hello CI
     runs-on: ubuntu-latest
 
     steps:
@@ -25,7 +25,7 @@ jobs:
       - name: Mostrar información del entorno
         run: |
           echo "=========================================="
-          echo "   PIPELINE CI - PRUEBAS AUTOMATIZADAS"
+          echo "      PRIMER PIPELINE CI"
           echo "=========================================="
           echo "Repositorio: ${{ github.repository }}"
           echo "Rama: ${{ github.ref_name }}"
@@ -34,10 +34,10 @@ jobs:
           echo "NPM Version: $(npm -v)"
           echo "=========================================="
 
-      - name: 1. Compilar y verificar sintaxis
+      - name: 1. Compilar la aplicación
         run: npm run build
 
-      - name: 2. Ejecutar pruebas unitarias (Generar JUnit)
+      - name: 2. Ejecutar pruebas unitarias
         run: |
           set +e
           npm run test:junit
@@ -66,4 +66,4 @@ jobs:
           if-no-files-found: warn
 
       - name: Finalizar pipeline
-        run: echo "Pipeline de pruebas finalizado con éxito."
+        run: echo "Pipeline ejecutado correctamente."
