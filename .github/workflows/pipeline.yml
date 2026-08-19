@@ -33,5 +33,10 @@ jobs:
       - name: Mostrar versión de Git
         run: git --version
 
+      - name: Ejecutar pruebas unitarias simuladas
+        run: |
+          echo "Ejecutando pruebas unitarias..."
+          echo "Todas las pruebas pasaron satisfactoriamente."
+
       - name: Finalizar pipeline
         run: echo "Pipeline ejecutado correctamente."
