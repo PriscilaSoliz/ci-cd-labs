@@ -1,4 +1,4 @@
-name: Pipeline CI con Pruebas y Cobertura
+name: Primer Pipeline CI
 
 on:
   push:
@@ -45,10 +45,10 @@ jobs:
           set -e
           echo "Estado de ejecución de pruebas: $TEST_STATUS"
           if [ $TEST_STATUS -ne 0 ]; then
-            echo "❌ Error: Las pruebas unitarias han fallado."
+            echo "Error: Las pruebas unitarias han fallado."
             exit $TEST_STATUS
           fi
-          echo "✅ Todas las pruebas unitarias pasaron exitosamente."
+          echo "Todas las pruebas unitarias pasaron exitosamente."
 
       - name: 3. Medir cobertura de código
         run: |
@@ -66,4 +66,4 @@ jobs:
           if-no-files-found: warn
 
       - name: Finalizar pipeline
-        run: echo "🎉 Pipeline de pruebas finalizado con éxito."
+        run: echo "Pipeline de pruebas finalizado con éxito."
