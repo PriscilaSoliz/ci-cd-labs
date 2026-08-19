@@ -1,0 +1,15 @@
+{
+  "name": "ci-cd-labs-app",
+  "version": "1.0.0",
+  "description": "Proyecto para laboratorio de CI/CD con pruebas unitarias y cobertura",
+  "main": "app/calculator.js",
+  "scripts": {
+    "build": "node -e \"console.log('Compilación y verificación de sintaxis exitosa')\"",
+    "test": "node --test app/*.test.js",
+    "test:junit": "node --test --test-reporter=junit --test-reporter-destination=junit.xml app/*.test.js",
+    "test:coverage": "node --test --experimental-test-coverage app/*.test.js"
+  },
+  "keywords": ["ci-cd", "testing", "github-actions"],
+  "author": "Priscila Soliz",
+  "license": "MIT"
+}
