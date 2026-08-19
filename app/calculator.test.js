@@ -5,7 +5,7 @@ const assert = require('node:assert');
 const { add, subtract, multiply, divide } = require('./calculator');
 
 test('Calculator - Operación Suma', () => {
-  assert.strictEqual(add(5, 3), 999); // Error intencional para verificar fallo en CI
+  assert.strictEqual(add(5, 3), 8); // Corregido exitosamente
   assert.strictEqual(add(-2, 4), 2);
   assert.strictEqual(add(0, 0), 0);
 });
