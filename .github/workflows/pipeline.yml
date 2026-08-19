@@ -33,5 +33,10 @@ jobs:
       - name: Mostrar versión de Git
         run: git --version
 
+      - name: Simular prueba fallida
+        run: |
+          echo "Simulando error en pruebas unitarias..."
+          exit 1
+
       - name: Finalizar pipeline
         run: echo "Pipeline ejecutado correctamente."
